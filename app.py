@@ -16,7 +16,7 @@ model = pickle.load(open('knn_model.pkl', 'rb'))
 def home():
     return render_template('characteristics.html')
 
-@app.route('/predict')
+@app.route('/predict',methods=['POST'])
 def predict():
     '''
     For rendering results on HTML GUI
